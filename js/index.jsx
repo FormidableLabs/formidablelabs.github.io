@@ -45,6 +45,22 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
+        <Radium.Style
+          rules={[
+            {
+              '*': {
+                boxSizing: 'border-box'
+              }
+            },
+            {
+              body: {
+                margin: 0,
+                background: '#d71920',
+                fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif'
+              }
+            }
+          ]}
+        />
         <Header />
         <RepoList repos={this.props.data} />
         <Footer />
