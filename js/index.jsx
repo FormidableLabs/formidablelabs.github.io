@@ -14,11 +14,7 @@ var fetchData = function (page) {
 
   var uri = 'https://api.github.com/orgs/formidablelabs/repos' +
     '?type=public&type=sources' +
-    // Secrets for development convenience (one off fake application).
-    // Delete before launching.
-    '&per_page=0' +
-    '&client_id=37a02cd830a1afd8fe2f' +
-    '&client_secret=23bfab898eec4656b01b0e647d9a9d84147a27f9';
+    '&per_page=0';
 
   apiRequest.open('GET', uri, true);
 

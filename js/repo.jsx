@@ -50,7 +50,9 @@ var styles = {
 
   repo: {
     position: 'relative',
-    background: 'rgba(255,255,255,0.9)',
+    backgroundColor: 'rgba(255,255,255,0.75)',
+    backgroundImage: 'radial-gradient(at 30% 0%, rgba(255,255,255,0.8), rgba(255,255,255,0))',
+    boxShadow: '1px 2px 1px rgba(0,0,0,0.18)',
     padding: 24,
     color: '#52242A'
   },

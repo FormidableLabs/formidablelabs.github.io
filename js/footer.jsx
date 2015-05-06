@@ -43,7 +43,7 @@ var styles = {
     color: '#fff',
     textAlign: 'center',
     fontSize: 18,
-    borderTop: '1px solid #0C0E10'
+    borderTop: '1px solid #1D2227'
   },
 
   logoLink: {
