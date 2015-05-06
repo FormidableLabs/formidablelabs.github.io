@@ -53,7 +53,7 @@ var styles = {
   column: {
     width: '100%',
     padding: '0 16px',
-    display: 'inline-block',
+    display: 'flex',
     marginTop: 32,
     verticalAlign: 'top',
 
@@ -67,6 +67,7 @@ var styles = {
   },
 
   repo: {
+    width: '100%',
     position: 'relative',
     backgroundColor: 'rgba(255,255,255,0.75)',
     backgroundImage: 'radial-gradient(at 30% 0%, rgba(255,255,255,0.8), rgba(255,255,255,0))',

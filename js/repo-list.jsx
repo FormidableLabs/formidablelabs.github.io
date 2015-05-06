@@ -37,7 +37,9 @@ var RepoList = React.createClass(Radium.wrap({
 
 var styles = {
   margin: '0 auto 50px',
-  maxWidth: '90%'
+  maxWidth: '90%',
+  display: 'flex',
+  flexWrap: 'wrap'
 };
 
 module.exports = RepoList;
