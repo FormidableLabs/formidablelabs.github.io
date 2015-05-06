@@ -6,25 +6,43 @@ var Repo = React.createClass(Radium.wrap({
   displayName: 'Repo',
 
   render: function () {
+    var stars;
+
+    if (this.props.stars) {
+      stars = (
+        <div style={styles.stars}>
+          <span style={styles.starsLabel}>
+            {this.props.stars}
+          </span>
+
+          <Icon name="star" />
+        </div>
+      )
+    }
+
     return (
       <div ref="column" style={styles.column}>
         <article style={styles.repo}>
+          <h2>
+            <a
+              style={styles.link}
+              href={this.props.url}
+            >
+              {this.props.name}
+            </a>
+          </h2>
+
+          <p style={styles.text}>{this.props.description}</p>
+
           <a
-            style={styles.link}
-            href={this.props.url}
+            href={this.props.homepage}
+            ref="homepage-link"
+            style={[styles.link, styles.homepageLink]}
           >
-            <h2>{this.props.name}</h2>
-
-            <p style={styles.text}>{this.props.description}</p>
-
-            <div style={styles.stars}>
-              <span style={styles.starsLabel}>
-                {this.props.stars}
-              </span>
-
-              <Icon name="star" />
-            </div>
+            Homepage
           </a>
+
+          {stars}
         </article>
       </div>
     )
@@ -53,12 +71,12 @@ var styles = {
     backgroundColor: 'rgba(255,255,255,0.75)',
     backgroundImage: 'radial-gradient(at 30% 0%, rgba(255,255,255,0.8), rgba(255,255,255,0))',
     boxShadow: '1px 2px 1px rgba(0,0,0,0.18)',
-    padding: 24,
+    padding: '24 24 36',
     color: '#52242A'
   },
 
   link: {
-    color: '#E53D4F',
+    color: '#E52C3F',
     textDecoration: 'none',
 
     ':hover': {
@@ -86,6 +104,14 @@ var styles = {
     marginRight: '0.4em',
     position: 'relative',
     top: -2
+  },
+
+  homepageLink: {
+    position: 'absolute',
+    bottom: 8,
+    right: 8,
+    fontWeight: 700,
+    fontSize: 13
   }
 };
 

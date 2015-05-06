@@ -1,5 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
+var _ = require('lodash');
 
 var Header = require('./header.jsx');
 var Footer = require('./footer.jsx');
@@ -10,11 +11,9 @@ var RepoList = require('./repo-list.jsx');
 var fetchData = function (page) {
   var apiRequest = new XMLHttpRequest();
 
-  var dataPage = page || 1;
-
   var uri = 'https://api.github.com/orgs/formidablelabs/repos' +
     '?type=public&type=sources' +
-    '&per_page=0';
+    '&per_page=200';
 
   apiRequest.open('GET', uri, true);
 
@@ -74,7 +73,13 @@ var App = React.createClass({
 });
 
 var renderApp = function (data) {
-  React.render(<App data={data} />, document.getElementById('app'));
+  var filteredData = _.filter(data, function (item) {
+    if (item.homepage) {
+      return true;
+    }
+  });
+
+  React.render(<App data={filteredData} />, document.getElementById('app'));
 };
 
 fetchData();

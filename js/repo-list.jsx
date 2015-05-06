@@ -15,6 +15,7 @@ var RepoList = React.createClass(Radium.wrap({
         name={repo.name}
         stars={repo.stargazers_count}
         description={repo.description}
+        homepage={repo.homepage}
       />
     )
   },
