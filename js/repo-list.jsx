@@ -11,7 +11,10 @@ var RepoList = React.createClass(Radium.wrap({
     return (
       <Repo
         key={i}
-        data={repo}
+        url={repo.html_url}
+        name={repo.name}
+        stars={repo.stargazers_count}
+        description={repo.description}
       />
     )
   },
@@ -23,8 +26,6 @@ var RepoList = React.createClass(Radium.wrap({
       false
     );
 
-    // console.log(sortedRepos);
-
     return (
       <main style={styles}>
         {sortedRepos.map(this.renderRepo)}
@@ -34,7 +35,7 @@ var RepoList = React.createClass(Radium.wrap({
 }));
 
 var styles = {
-  margin: '0 auto',
+  margin: '0 auto 50px',
   maxWidth: '90%'
 };
 

@@ -3,14 +3,17 @@ var Radium = require('radium');
 
 var Header = React.createClass({
   displayName: 'Header',
-  
+
   render: function () {
     return (
       <header>
-        <a style={linkStyle} href="http://formidablelabs.com">
+        <a
+          style={styles.link}
+          href="http://formidablelabs.com"
+        >
           <img
-            width="400"
-            src="img/formidable-logo.svg"
+            style={styles.logo}
+            src="img/logo.svg"
             alt="Formidable Labs"
           />
         </a>
@@ -19,10 +22,25 @@ var Header = React.createClass({
   }
 });
 
-var linkStyle = {
-  display: 'block',
-  margin: '100px 0 50px',
-  textAlign: 'center'
-};
+var styles = {
+  link: {
+    maxWidth: 300,
+    display: 'block',
+    margin: '100px auto 20px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    color: '#fff'
+  },
+
+  logo: {
+    maxWidth: '100%',
+    height: 'auto'
+  },
+
+  heading: {
+    fontWeight: 700,
+    textTransform: 'uppercase'
+  }
+}
 
 module.exports = Header;

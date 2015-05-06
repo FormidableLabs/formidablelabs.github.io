@@ -56,7 +56,14 @@ var App = React.createClass({
               body: {
                 margin: 0,
                 background: '#d71920',
-                fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif'
+                fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
+                WebkitFontSmoothing: 'antialiased',
+                MozOsxFontSmoothing: 'grayscale'
+              }
+            },
+            {
+              'h1, h2, h3, h4, h5, h6, p': {
+                margin: 0
               }
             }
           ]}
