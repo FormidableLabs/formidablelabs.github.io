@@ -55,7 +55,7 @@ var styles = {
     top: 0,
     right: 0,
     left: 0,
-    padding: '10px 100px',
+    padding: '10px',
     borderBottom: '1px solid #1D2227',
     background: '#2b303b',
     color: '#fff',
