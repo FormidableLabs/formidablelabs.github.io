@@ -2,7 +2,7 @@ var React = require('react');
 var Radium = require('radium');
 var _ = require('lodash');
 
-var Repo = require('./repo.jsx');
+var Repo = require('./repo');
 
 var RepoList = React.createClass(Radium.wrap({
   displayName: 'RepoList',

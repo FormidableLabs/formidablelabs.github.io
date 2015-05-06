@@ -2,11 +2,11 @@ var React = require('react');
 var Radium = require('radium');
 var _ = require('lodash');
 
-var Header = require('./header.jsx');
-var Footer = require('./footer.jsx');
-var Polygon = require('./polygon.jsx');
+var Header = require('./header');
+var Footer = require('./footer');
+var Polygon = require('./polygon');
 
-var RepoList = require('./repo-list.jsx');
+var RepoList = require('./repo-list');
 
 var fetchData = function (page) {
   var apiRequest = new XMLHttpRequest();

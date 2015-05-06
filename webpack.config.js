@@ -12,15 +12,13 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        include: path.resolve(__dirname, "js"),
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.jsx$/,
+        test: /\.js(x|)?$/,
         include: path.resolve(__dirname, "js"),
         loader: 'babel-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ["", ".js", ".jsx"]
   }
 }
