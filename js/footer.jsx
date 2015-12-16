@@ -12,12 +12,12 @@ var Footer = React.createClass(Radium.wrap({
 
          <a
            style={styles.logoLink}
-           href="http://formidablelabs.com"
+           href="http://formidable.com"
           >
            <img
              width="300"
              src="img/formidable-logo.svg"
-             alt="Formidable Labs" />
+             alt="Formidable" />
          </a>
        </p>
 
@@ -26,7 +26,7 @@ var Footer = React.createClass(Radium.wrap({
          <a
            ref="link"
            style={styles.link}
-           href="http://formidablelabs.com/careers/">
+           href="http://formidable.com/team/">
            We’re hiring
           </a>
           .
