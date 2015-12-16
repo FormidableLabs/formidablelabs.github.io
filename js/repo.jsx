@@ -34,13 +34,17 @@ var Repo = React.createClass(Radium.wrap({
 
           <p style={styles.text}>{this.props.description}</p>
 
-          <a
-            href={this.props.homepage}
-            ref="homepage-link"
-            style={[styles.link, styles.homepageLink]}
-          >
-            Homepage
-          </a>
+          {this.props.homepage ?
+            (
+              <a
+                href={this.props.homepage}
+                ref="homepage-link"
+                style={[styles.link, styles.homepageLink]}
+              >
+                Homepage
+              </a>
+            ) : ""
+          }
 
           {stars}
         </article>
