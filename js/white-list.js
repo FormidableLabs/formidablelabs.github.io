@@ -9,11 +9,11 @@ module.exports = [
   'css-to-radium',
   'pull-report',
   'chai-jq',
-  'handlebones',
   'ecology',
   'rowdy',
   'express-winston-middleware',
   'gulp-mdox',
   'mock-raf',
-  'requirepack'
+  'requirepack',
+  'react-tutorial'
 ];
