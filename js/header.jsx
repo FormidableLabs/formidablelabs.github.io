@@ -13,7 +13,7 @@ var Header = React.createClass(Radium.wrap({
         >
           <img
             style={styles.logo}
-            src="img/logo.svg"
+            src="img/logo-white.svg"
             alt="Formidable"
           />
         </a>

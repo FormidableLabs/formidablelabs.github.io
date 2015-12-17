@@ -16,7 +16,7 @@ var Footer = React.createClass(Radium.wrap({
           >
            <img
              width="300"
-             src="img/formidable-logo.svg"
+             src="img/logo-white.svg"
              alt="Formidable" />
          </a>
        </p>
