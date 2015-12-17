@@ -9,18 +9,18 @@ var Header = React.createClass(Radium.wrap({
       <header>
         <a
           style={styles.link}
-          href="http://formidablelabs.com"
+          href="http://formidable.com"
         >
           <img
             style={styles.logo}
-            src="img/logo.svg"
-            alt="Formidable Labs"
+            src="img/logo-white.svg"
+            alt="Formidable"
           />
         </a>
 
         <a
           ref="banner"
-          href="mailto:contact@formidablelabs.com"
+          href="mailto:hello@formidable.com"
           style={styles.banner}
         >
           Need React.js Consulting? Contact Us.
