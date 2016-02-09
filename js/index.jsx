@@ -3,6 +3,7 @@ var whiteList = require('./white-list');
 var React = require('react');
 var Radium = require('radium');
 var _ = require('lodash');
+var ga = require('react-ga');
 
 var Header = require('./header');
 var Footer = require('./footer');
@@ -39,6 +40,11 @@ var fetchData = function (page) {
 
 var App = React.createClass({
   displayName: 'App',
+
+  componentDidMount: function () {
+    ga.initialize('UA-43290258-1');
+    ga.pageview('stack.formidable.com/');
+  },
 
   render: function () {
     return (

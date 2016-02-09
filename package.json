@@ -23,5 +23,8 @@
     "trianglify": "git+https://git@github.com/alexlande/trianglify.git#fe4ffb1c9c7468ff6c49d34e93b4926754f91831",
     "webpack": "^1.8.11",
     "webpack-dev-server": "^1.8.2"
+  },
+  "dependencies": {
+    "react-ga": "^1.2.0"
   }
 }
