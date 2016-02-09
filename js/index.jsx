@@ -1,6 +1,7 @@
 var whiteList = require('./white-list');
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Radium = require('radium');
 var _ = require('lodash');
 
@@ -82,7 +83,7 @@ var renderApp = function (data) {
     }
   });
 
-  React.render(<App data={filteredData} />, document.getElementById('app'));
+  ReactDOM.render(<App data={filteredData} />, document.getElementById('app'));
 };
 
 fetchData();

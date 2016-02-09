@@ -1,4 +1,6 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
+
 var Radium = require('radium');
 var Trianglify = require('trianglify');
 var _ = require('lodash');
@@ -31,13 +33,13 @@ var Polygon = React.createClass(Radium.wrap({
       ]
     });
 
-    this.getDOMNode().innerHTML = '';
-    this.getDOMNode().appendChild(pattern.canvas());
+    this.refs.polygon.innerHTML = '';
+    this.refs.polygon.appendChild(pattern.canvas());
   },
 
   render: function () {
     return (
-      <div style={styles} />
+      <div style={styles} ref="polygon" />
     );
   }
 }));
