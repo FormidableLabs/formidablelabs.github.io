@@ -40,7 +40,7 @@ var Polygon = React.createClass({
 
   render: function () {
     return (
-      <div style={styles} ref="polygon" />
+      <div style={styles} />
     );
   }
 });
