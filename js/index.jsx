@@ -7,8 +7,9 @@ var Style = Radium.Style;
 var StyleRoot = Radium.StyleRoot;
 var _ = require('lodash');
 
-var Header = require('./header');
-var Footer = require('./footer');
+var Common = require('formidable-landers');
+var Header = Common.Header;
+var Footer = Common.Footer;
 var Polygon = require('./polygon');
 
 var RepoList = require('./repo-list');
@@ -68,13 +69,27 @@ var App = React.createClass({
           color: '#d71920'
         }
         }} />
+        <Header backgroundColor="#2b303b" />
+          <h1 style={styles.heading}>Our open source work</h1>
         <RepoList repos={this.props.data} />
-        <Footer />
+        <Footer backgroundColor="#2b303b" styleOverrides={{color: "#ffffff"}} />
         <Polygon />
       </div>
     );
   }
 });
+
+var styles = {
+  heading: {
+    maxWidth: '98%',
+    display: 'block',
+    margin: '100px auto 20px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    color: '#fff'
+  }
+};
+
 
 var renderApp = function (data) {
   var filteredData = _.filter(data, function (item) {
