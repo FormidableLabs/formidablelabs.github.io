@@ -33,8 +33,9 @@ var Polygon = React.createClass({
       ]
     });
 
-    this.refs.polygon.innerHTML = '';
-    this.refs.polygon.appendChild(pattern.canvas());
+    var el = ReactDOM.findDOMNode(this);
+    el.innerHTML = '';
+    el.appendChild(pattern.canvas());
   },
 
   render: function () {
