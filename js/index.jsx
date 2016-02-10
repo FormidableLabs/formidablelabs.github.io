@@ -6,6 +6,7 @@ var Radium = require('radium');
 var Style = Radium.Style;
 var StyleRoot = Radium.StyleRoot;
 var _ = require('lodash');
+var ga = require('react-ga');
 
 var Common = require('formidable-landers');
 var Header = Common.Header;
@@ -43,6 +44,11 @@ var fetchData = function (page) {
 
 var App = React.createClass({
   displayName: 'App',
+
+  componentDidMount: function () {
+    ga.initialize('UA-43290258-1');
+    ga.pageview('stack.formidable.com/');
+  },
 
   render: function () {
     return (
