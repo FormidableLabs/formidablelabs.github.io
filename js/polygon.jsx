@@ -5,7 +5,7 @@ var Radium = require('radium');
 var Trianglify = require('trianglify');
 var _ = require('lodash');
 
-var Polygon = React.createClass(Radium.wrap({
+var Polygon = React.createClass({
   displayName: 'Polygon',
 
   componentDidMount: function () {
@@ -42,7 +42,7 @@ var Polygon = React.createClass(Radium.wrap({
       <div style={styles} ref="polygon" />
     );
   }
-}));
+});
 
 var styles = {
   position: 'fixed',
@@ -53,4 +53,4 @@ var styles = {
   zIndex: -1
 };
 
-module.exports = Polygon;
+module.exports = Radium(Polygon);

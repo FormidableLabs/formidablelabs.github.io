@@ -3,6 +3,8 @@ var whiteList = require('./white-list');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Radium = require('radium');
+var Style = Radium.Style;
+var StyleRoot = Radium.StyleRoot;
 var _ = require('lodash');
 
 var Header = require('./header');
@@ -44,30 +46,28 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        <Radium.Style
-          rules={[
-            {
-              '*': {
-                boxSizing: 'border-box'
-              }
-            },
-            {
-              body: {
-                margin: 0,
-                background: '#d71920',
-                fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
-                WebkitFontSmoothing: 'antialiased',
-                MozOsxFontSmoothing: 'grayscale'
-              }
-            },
-            {
-              'h1, h2, h3, h4, h5, h6, p': {
-                margin: 0
-              }
-            }
-          ]}
-        />
-        <Header />
+        <Style rules={{
+        '*': {
+          boxSizing: 'border-box'
+        },
+        body: {
+          margin: 0,
+          background: '#d71920',
+          fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale'
+        },
+        'h1, h2, h3, h4, h5, h6, p': {
+          margin: 0
+        },
+        'a': {
+          color: '#ffffff',
+          fontWeight: 'bold'
+        },
+        'a:hover': {
+          color: '#d71920'
+        }
+        }} />
         <RepoList repos={this.props.data} />
         <Footer />
         <Polygon />
@@ -83,7 +83,7 @@ var renderApp = function (data) {
     }
   });
 
-  ReactDOM.render(<App data={filteredData} />, document.getElementById('app'));
+  ReactDOM.render(<StyleRoot><App data={filteredData} /></StyleRoot>, document.getElementById('app'));
 };
 
 fetchData();
