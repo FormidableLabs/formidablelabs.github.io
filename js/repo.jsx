@@ -2,7 +2,7 @@ var React = require('react');
 var Radium = require('radium');
 var Icon = require('react-geomicons');
 
-var Repo = React.createClass(Radium.wrap({
+var Repo = React.createClass({
   displayName: 'Repo',
 
   render: function () {
@@ -51,7 +51,7 @@ var Repo = React.createClass(Radium.wrap({
       </div>
     )
   }
-}));
+});
 
 var styles = {
   column: {
@@ -120,4 +120,4 @@ var styles = {
   }
 };
 
-module.exports = Repo;
+module.exports = Radium(Repo);
