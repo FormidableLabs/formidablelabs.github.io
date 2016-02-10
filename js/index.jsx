@@ -56,7 +56,8 @@ var App = React.createClass({
           background: '#d71920',
           fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
           WebkitFontSmoothing: 'antialiased',
-          MozOsxFontSmoothing: 'grayscale'
+          MozOsxFontSmoothing: 'grayscale',
+          fontSize: '16px'
         },
         'h1, h2, h3, h4, h5, h6, p': {
           margin: 0
@@ -70,7 +71,7 @@ var App = React.createClass({
         }
         }} />
         <Header backgroundColor="#2b303b" />
-          <h1 style={styles.heading}>Our open source work</h1>
+          <h1 style={styles.heading}>Our open source work:</h1>
         <RepoList repos={this.props.data} />
         <Footer backgroundColor="#2b303b" styleOverrides={{color: "#ffffff"}} />
         <Polygon />
@@ -83,10 +84,12 @@ var styles = {
   heading: {
     maxWidth: '98%',
     display: 'block',
-    margin: '100px auto 20px',
+    margin: '3em auto 1.5em',
     textAlign: 'center',
     textDecoration: 'none',
-    color: '#fff'
+    color: '#fff',
+    fontSize: '2.5rem',
+    fontWeight: 'bold'
   }
 };
 
