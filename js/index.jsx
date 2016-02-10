@@ -71,7 +71,10 @@ var App = React.createClass({
         }
         }} />
         <Header backgroundColor="#2b303b" />
-          <h1 style={styles.heading}>Our open source work:</h1>
+          <h1 style={styles.title}>
+            <img style={styles.logo} src="/static/logo-formidable-black.svg" />
+            <span style={styles.heading}>Open Source</span>
+          </h1>
         <RepoList repos={this.props.data} />
         <Footer backgroundColor="#2b303b" styleOverrides={{color: "#ffffff"}} />
         <Polygon />
@@ -81,15 +84,25 @@ var App = React.createClass({
 });
 
 var styles = {
-  heading: {
+  title: {
     maxWidth: '98%',
     display: 'block',
     margin: '3em auto 1.5em',
+    textAlign: 'center'
+  },
+  heading: {
+    display: 'block',
     textAlign: 'center',
     textDecoration: 'none',
-    color: '#fff',
+    color: '#ffffff',
     fontSize: '2.5rem',
-    fontWeight: 'bold'
+    fontWeight: 'normal'
+  },
+  logo: {
+    display: 'block',
+    maxWidth: '300px',
+    margin: '0 auto',
+    paddingRight: '24px'
   }
 };
 
