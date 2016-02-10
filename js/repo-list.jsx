@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 var Repo = require('./repo');
 
-var RepoList = React.createClass(Radium.wrap({
+var RepoList = React.createClass({
   displayName: 'RepoList',
 
   renderRepo: function (repo, i) {
@@ -33,7 +33,7 @@ var RepoList = React.createClass(Radium.wrap({
       </main>
     );
   }
-}));
+});
 
 var styles = {
   margin: '0 auto 50px',
@@ -42,4 +42,4 @@ var styles = {
   flexWrap: 'wrap'
 };
 
-module.exports = RepoList;
+module.exports = Radium(RepoList);
