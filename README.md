@@ -2,14 +2,21 @@
 
 This is a dynamic list of our open source projects.
 
-To run it locally:
+## Setup
+
+To install and run the site locally:
 
 ```
 npm install
-npm start
+npm run start
 ```
 
-To build `dist` JS: `npm build`.
+Open [localhost:8080](http://localhost:8080) in your favorite browser.
+
+
+## Build
+
+To build the JS to the `/dist`, run `npm run build`.
 
 ## Notes
 
