@@ -76,13 +76,19 @@ var App = React.createClass({
           color: '#d71920'
         }
         }} />
-        <Header backgroundColor="#2b303b" />
+        <Header
+          backgroundColor="#6B000B"
+        />
           <h1 style={styles.title}>
             <img style={styles.logo} src="/static/logo-formidable-black.svg" />
             <span style={styles.heading}>Open Source</span>
           </h1>
         <RepoList repos={this.props.data} />
-        <Footer backgroundColor="#2b303b" styleOverrides={{color: "#ffffff"}} />
+        <Footer
+          backgroundColor="#6B000B"
+          logoColor="white"
+          styleOverrides={{color: "#ffffff"}}
+        />
         <Polygon />
       </div>
     );
