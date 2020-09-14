@@ -1,2 +1,27 @@
+### OSX ###
+.AppleDouble
+.DS_Store
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.tmp
+.Trashes
+
+### Windows ###
+# Windows image file caches
+ehthumbs.db
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
 node_modules
 npm-debug.log
